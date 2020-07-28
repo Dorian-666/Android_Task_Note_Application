@@ -24,7 +24,6 @@ public class AddNoteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_note);
-        
         bindUi();
         configureDatabase();
         setListeners();
@@ -43,7 +42,6 @@ public class AddNoteActivity extends AppCompatActivity {
 
     private void configureDatabase() {
         AppDatabase appDatabase = AppDatabase.getDatabase(getApplicationContext());
-
         this.notesDao = appDatabase.getNotesDao();
     }
 
