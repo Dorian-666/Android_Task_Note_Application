@@ -19,7 +19,7 @@ public class AddNoteActivity extends AppCompatActivity {
     private EditText title, description;
     private Button buttonSave;
     private NotesDao notesDao;
-    public static boolean result = true;
+    public static boolean resultForValidation = true;
 
 
     @Override
@@ -51,7 +51,7 @@ public class AddNoteActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 validationOfTexts();
-                if (result == true) {
+                if (resultForValidation == true) {
                     Note note = new Note(UUID.randomUUID().toString(),
                             title.getText().toString(),
                             description.getText().toString());
@@ -70,14 +70,14 @@ public class AddNoteActivity extends AppCompatActivity {
         String descriptionForCheck = description.getText().toString();
         while (true) {
             if (titleForCheck.trim().equals("") || (descriptionForCheck.trim().equals(""))) {
-                result = false;
+                resultForValidation = false;
                 Toast.makeText(this, "Title or description should not be empty! ", Toast.LENGTH_SHORT).show();
 
-            } else if (result == true) {
+            } else if (resultForValidation == true) {
                 break;
             }
         }
-        return result;
+        return resultForValidation;
 
 
     }
