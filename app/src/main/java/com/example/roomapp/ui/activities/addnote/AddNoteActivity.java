@@ -1,6 +1,7 @@
 package com.example.roomapp.ui.activities.addnote;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -69,7 +70,7 @@ public class AddNoteActivity extends AppCompatActivity {
         String titleForCheck = title.getText().toString();
         String descriptionForCheck = description.getText().toString();
         while (true) {
-            if (titleForCheck.trim().equals("") || (descriptionForCheck.trim().equals(""))) {
+            if (TextUtils.isEmpty(titleForCheck) || (TextUtils.isEmpty(descriptionForCheck))){
                 resultForValidation = false;
                 Toast.makeText(this, "Title or description should not be empty! ", Toast.LENGTH_SHORT).show();
 
