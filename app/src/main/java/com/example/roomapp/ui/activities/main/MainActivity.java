@@ -7,14 +7,13 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
-import androidx.navigation.NavHostController;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.roomapp.AddNoteActivity;
 import com.example.roomapp.R;
 import com.example.roomapp.local.AppDatabase;
 import com.example.roomapp.local.dao.NotesDao;
 import com.example.roomapp.model.entity.Note;
+import com.example.roomapp.ui.activities.addnote.AddNoteActivity;
 
 import java.util.List;
 
